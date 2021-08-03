@@ -55,3 +55,21 @@ function sortInt(a, b) {
 }
 sa = newArr(100).sort(sortInt);
 binarySearch(sa, 10);
+
+//BUBBLE SORT
+const ints = [9, 8, 6, 4, 29, 11, 2, 1, 11, 7];
+
+function bubbleSort(nums) {
+  const sorted = [...nums];
+  for (let i = 0; i < sorted.length; i++) {
+    for (let j = 0; j < sorted.length - 1; j++) {
+      if (sorted[j] > sorted[j + 1]) {
+        [sorted[j + 1], sorted[j]] = [sorted[j], sorted[j + 1]];
+      }
+    }
+  }
+
+  return sorted;
+}
+
+bubbleSort(ints);
