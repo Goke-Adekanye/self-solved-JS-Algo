@@ -73,3 +73,17 @@ function bubbleSort(nums) {
 }
 
 bubbleSort(ints);
+
+// SUM ALL NUMBERS IN A RANGE (BOTH INCLUSIVE)
+function sumAll(arr) {
+  const newArr = [...arr];
+  let min = Math.min(...newArr);
+  let max = Math.max(...newArr);
+  let count = 0;
+  for (let i = min; i <= max; i++) {
+    count += i;
+  }
+  return count;
+}
+
+sumAll([1, 4]);
