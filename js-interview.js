@@ -87,3 +87,19 @@ function sumAll(arr) {
 }
 
 sumAll([1, 4]);
+
+let x = {
+  a: {
+    b: {
+      c: 1,
+    },
+  },
+};
+
+function name(x) {
+  const clone = json.parse(json.stringify(x));
+  clone.a.b.c = 2;
+
+  return console.log("clone :>> ", clone);
+}
+name(x);
